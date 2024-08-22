@@ -20,7 +20,7 @@ export interface Pokemon {
       statName: string;
       effort: number;
       urlStat: string;
-      typeStats: string; // -> /stat/3/
+      typeStats: string;
     }
   ];
 }

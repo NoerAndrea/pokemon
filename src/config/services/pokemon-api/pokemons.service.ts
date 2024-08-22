@@ -1,8 +1,7 @@
 import axios, { isAxiosError } from "axios";
-
-import { Pokemon } from "../../interfaces/pokemon.interfaces";
 import { pokemonApi } from "./client-http";
 import { ResponseAPI } from "./response-api.interface";
+import { Pokemon } from "../../interfaces/pokemon.interfaces";
 
 export async function getAllPokemonsServices(
   page: number,
@@ -50,7 +49,7 @@ export async function getAllPokemonsServices(
 
     return {
       ok: true,
-      message: "Listado com sucesso",
+      message: "Successfully listed",
       pagination: {
         limit: limit || 20,
         count: response.data.count,
@@ -62,12 +61,13 @@ export async function getAllPokemonsServices(
     if (isAxiosError(err)) {
       return {
         ok: false,
-        message: "API indisponivel!",
+        message: "API unavailable.",
       };
     }
+
     return {
       ok: false,
-      message: "Aconteceu um erro inesperado!",
+      message: "An unexpected error has occurred.",
     };
   }
 }

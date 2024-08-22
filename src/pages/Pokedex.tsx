@@ -11,7 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import { listPokedex } from "../store/modules/pokedex/pokedex.slice";
+import { listPokedex } from "../store/modules/pokedex/pokedexSlice";
 import { useNavigate } from "react-router-dom";
 import { LikeIcon } from "../components/LikeIcon";
 import { useAppSelector } from "../store/hook";
@@ -96,9 +96,9 @@ export function Pokedex() {
                   sx={{
                     cursor: "pointer",
                     textDecoration: "none",
-                    color: "#806000",
+                    color: "#383838",
                     "&:hover": {
-                      color: "#ad8e33",
+                      color: "#555555",
                     },
                   }}
                 >

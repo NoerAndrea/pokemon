@@ -4,7 +4,7 @@ import {
   addPokemon,
   listPokedex,
   removePokemon,
-} from "../store/modules/pokedex/pokedex.slice";
+} from "../store/modules/pokedex/pokedexSlice";
 import { useAppSelector } from "../store/hook";
 import like from "../assets/icone_curtir.svg";
 import likeSelected from "../assets/icone_curtir_selecionado.svg";

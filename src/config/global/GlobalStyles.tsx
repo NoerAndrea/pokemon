@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0px;
         padding: 0px;
         font-family: ${(props) => props.theme.fonts.default};
-        overflow: hidden;
+        overflow: auto;
         color: ${(props) => props.theme.colors.gray1};
     }
     a, a:hover, a:focus, a:active{
