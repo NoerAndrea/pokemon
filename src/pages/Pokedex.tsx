@@ -11,15 +11,16 @@ import {
   Typography,
 } from "@mui/material";
 
-import { listPokedex } from "../store/modules/pokedex/pokedexSlice";
 import { useNavigate } from "react-router-dom";
 import { LikeIcon } from "../components/LikeIcon";
 import { useAppSelector } from "../store/hook";
 import { Navbar } from "../components/Navbar";
 import { useTheme } from "styled-components";
+import { listPokedex } from "../store/modules/pokedex/pokedexSlice";
 
 export function Pokedex() {
   const pokedex = useAppSelector((state) => listPokedex(state.pokemons));
+  console.log(pokedex);
 
   if (!pokedex) {
     return <div>Loading...</div>;
@@ -70,7 +71,7 @@ export function Pokedex() {
                   sm={6}
                   md={4}
                   lg={3}
-                  key={pokemon.id}
+                  key={pokemon.id} // Adicionando a key única aqui
                   width={"18rem"}
                 >
                   <Card sx={{ minWidth: "80%" }}>
