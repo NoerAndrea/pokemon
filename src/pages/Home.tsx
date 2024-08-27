@@ -40,6 +40,7 @@ export function Home() {
       top: 0,
       behavior: "smooth",
     });
+    console.log(event);
   };
 
   return (
